@@ -1,0 +1,100 @@
+:root {
+    --color-1: #FB7D7F;
+    --color-2: #F94144;
+    --color-3: #F9585B;
+    --color-4: #F94C4F;
+    --color-5: #FB8500;
+    --color-6: #FB8500;
+    --color-7: #000000;
+    --color-8: #ffffff;
+    --color-9: #ff9ea0;
+    --color-10: #2c2c2c;
+}
+
+:root {
+    --font-1: "Montserrat", sans-serif;
+    --font-2: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--color-1);
+}
+
+#bgNav {
+    background-color: var(--color-2);
+}
+
+#btnNavbar {
+    border-color: var(--color-7);
+    color: var(--color-8);
+}
+
+#btnNavbar:hover {
+    color: var(--color-7);
+    border-color: black;
+}
+
+.logo {
+    width: 100%;
+    height: 80px;
+}
+
+.btnFormNavbar {
+    border-color: var(--color-7);
+    color: var(--color-8);
+}
+
+.btnFormNavbar:hover {
+    color: var(--color-7);
+    border-color: black;
+    background-color: var(--color-8);
+}
+
+.btn-cadastro,
+.btn-cadastro:focus {
+    color: var(--color-8);
+    background: var(--color-1);
+    font-size: 14px;
+    padding: 8px 26px;
+    margin: 0;
+    border-radius: 4px;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.btn-cadastro:hover {
+    color: var(--color-8);
+    background-color: var(--color-5);
+}
+
+.header-conta h5 {
+    color: var(--color-10);
+}
+
+.header-conta p {
+    font-size: 15px;
+}
+
+.needs-validation label {
+    font-family: var(--font-1);
+    font-size: 20px;
+}
+
+.needs-validation p {
+    font-family: var(--font-2);
+    font-size: 20px;
+}
+
+.btn-conta {
+    font-family: var(--font-2);
+    font-size: 18px;
+}
+
+.rodape {
+    align-items: center;
+}
+
+.rodape p {
+    color: white;
+    text-align: center;
+}
