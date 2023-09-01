@@ -6,6 +6,6 @@ Os arquivos exigidos encontram-se organizados em pastas que representam entregas
 
 > Descrição das entregas:
 
-+ Primeira entrega - front-end e modelo lógico e conceitual iniciais do projeto;
++ Primeira entrega - front-end e modelo lógico iniciais do projeto. O modelo conceitual do banco de dados do projeto encontra-se abaixo:
 
 ![banco-conceitual-squad25](https://github.com/squad25-recodePro23/projetofinal-recodepro/assets/142354609/f39ba6bb-fd87-4e57-8eeb-3adfa4ec05fb)
