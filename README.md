@@ -1,4 +1,4 @@
-# Projeto final do Squad 25 - Recode Pro 2023
+# Projeto final do Squad 25 - Recode Pro 2023.
 
 Este repositório fora criado com o intuito de manter todas as entregas em squad, relacionadas ao projeto final, no programa Recode Pro 2023.
 
