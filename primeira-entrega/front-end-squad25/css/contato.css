@@ -1,0 +1,163 @@
+:root {
+    --color-1: #FB7D7F;
+    --color-2: #F94144;
+    --color-3: #F9585B;
+    --color-4: #F94C4F;
+    --color-5: #FB8500;
+    --color-6: #FB8500;
+    --color-7: #000000;
+    --color-8: #ffffff;
+    --color-9: #ff9ea0;
+    --color-10: #2c2c2c;
+}
+
+body {
+    background-color: var(--color-1);
+}
+
+/* #bgNav */
+
+#bgNav {
+    background-color: var(--color-2);
+}
+
+#btnNavbar {
+    border-color: var(--color-7);
+    color: var(--color-8);
+}
+
+#btnNavbar:hover {
+    color: var(--color-7);
+    border-color: black;
+}
+
+.main-title {
+    color: var(--color-8);
+}
+
+.logo {
+    width: 100%;
+    height: 80px;
+}
+
+.btnFormNavbar {
+    border-color: var(--color-7);
+    color: var(--color-8);
+}
+
+.btnFormNavbar:hover {
+    color: var(--color-7);
+    border-color: black;
+    background-color: var(--color-8);
+}
+
+.btn-cadastro,
+.btn-cadastro:focus {
+    color: var(--color-8);
+    background: var(--color-1);
+    font-size: 14px;
+    padding: 8px 26px;
+    margin: 0;
+    border-radius: 4px;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.btn-cadastro:hover {
+    color: var(--color-8);
+    background-color: var(--color-5);
+}
+
+/* #contact-section */
+
+.title-section {
+    color: var(--color-7);
+}
+
+.card-box-contact {
+    gap: 2%;
+    width: 40%;
+}
+
+.card-contact {
+    margin-bottom: 1em;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--color-8);
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    flex: 1 1 300px;
+    height: 40%;
+}
+
+.card-contact:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.card-contact i {
+    font-size: 45px;
+}
+
+.form-box-contact {
+    width: 58%;
+}
+
+.card-text {
+    font-weight: 300;
+}
+
+.form-contact {
+    background-color: var(--color-8);
+    border-radius: 10px;
+    border: 1px solid rgb(219, 219, 219);
+    border-bottom: 3px solid var(--color-7);
+    margin-bottom: 1em;
+}
+
+@media (max-width: 992px) {
+    .main-box {
+        flex-direction: column;
+    }
+
+    .card-box-contact {
+        width: 100%;
+    }
+
+    .form-box-contact {
+        width: 100%;
+        padding-top: 0 !important;
+    }
+}
+
+/* #subscribe-section */
+
+#subscribe-section {
+    background-color: var(--color-3);
+}
+
+.form-box-subscribe {
+    gap: 1%;
+}
+
+.form-box-subscribe div {
+    min-width: 50%;
+    border-radius: 10px;
+}
+
+@media (max-width: 991px) {
+    .form-box-subscribe div {
+        flex-direction: column;
+        min-width: 90%;
+    }
+}
+
+/* footer */
+
+.rodape {
+    align-items: center;
+}
+
+.rodape p {
+    color: white;
+    text-align: center;
+}

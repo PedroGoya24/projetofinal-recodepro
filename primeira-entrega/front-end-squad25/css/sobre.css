@@ -1,0 +1,233 @@
+:root {
+  --color-1: #FB7D7F;
+  --color-2: #F94144;
+  --color-3: #F9585B;
+  --color-4: #F94C4F;
+  --color-5: #FB8500;
+  --color-6: #FB8500;
+  --color-7: #000000;
+  --color-8: #ffffff;
+  --color-9: #ff9ea0;
+  --color-10: #2c2c2c;
+}
+
+:root {
+  --font-1: "Montserrat", sans-serif;
+  --font-2: 'Inter', sans-serif;
+}
+
+body {
+  background-color: var(--color-1);
+}
+
+#bgNav {
+  background-color: var(--color-2);
+}
+
+#btnNavbar {
+  border-color: var(--color-7);
+  color: var(--color-8);
+}
+
+#btnNavbar:hover {
+  color: var(--color-7);
+  border-color: black;
+}
+
+.main-title {
+  color: var(--color-8);
+}
+
+.logo {
+  width: 100%;
+  height: 80px;
+}
+
+.btnFormNavbar {
+  border-color: var(--color-7);
+  color: var(--color-8);
+}
+
+.btnFormNavbar:hover {
+  color: var(--color-7);
+  border-color: black;
+  background-color: var(--color-8);
+}
+
+.btn-cadastro,
+.btn-cadastro:focus {
+  color: var(--color-8);
+  background: var(--color-1);
+  font-size: 14px;
+  padding: 8px 26px;
+  margin: 0;
+  border-radius: 4px;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.btn-cadastro:hover {
+  color: var(--color-8);
+  background-color: var(--color-5);
+}
+
+.sobre {
+  background-color: var(--color-9);
+}
+
+.sobre .conteudo h3 {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+  padding: 10px 20px;
+  background-color: var(--color-3);
+  color: var(--color-10);
+  border-radius: 7px;
+  display: inline-block;
+}
+
+.sobre .conteudo h2 {
+  font-weight: 700;
+}
+
+.sobre .conteudo p {
+  font-size: 20px;
+}
+
+.sobre .conteudo p:last-child {
+  margin-bottom: 0;
+}
+
+.sobre .conteudo .leia-mais {
+  background-color: var(--color-5);
+  color: var(--color-10);
+  font-family: var(--font-1);
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  padding: 12px 24px;
+  border-radius: 5px;
+  transition: 0.3s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.sobre .conteudo .leia-mais:hover {
+  background-color: var(--color-2);
+}
+
+.sobre .icon-box {
+  padding: 50px 40px;
+  box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  transition: all 0.3s ease-out 0s;
+  background-color: var(--color-8);
+}
+
+.sobre .icon-box i {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  font-size: 32px;
+  line-height: 0;
+  transition: all 0.4s ease-out 0s;
+}
+
+.sobre .icon-box h3 {
+  margin-bottom: 10px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.sobre .icon-box p {
+  margin-bottom: 0;
+}
+
+.sobre .icon-box:hover i {
+  background-color: var(--color-5);
+  color: var(--color-8);
+}
+
+.sobre .icon-boxes .col-md-6:nth-child(2) .icon-box,
+.sobre .icon-boxes .col-md-6:nth-child(4) .icon-box {
+  margin-top: -40px;
+}
+
+.rodape {
+  align-items: center;
+}
+
+.rodape p {
+  color: white;
+  text-align: center;
+}
+
+.card-meta {
+  font-size: 11px;
+  letter-spacing: 0.07rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: var(--font-2);
+  color: var(--color-7), 0.4;
+  margin-bottom: 10px;
+}
+
+.card-entrada-2 {
+  margin-bottom: 30px;
+}
+
+.card-entrada-2 .card-meta {
+  font-size: 11px;
+  letter-spacing: 0.07rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: var(--font-2);
+  color: var(--color-7);
+  margin-bottom: 10px;
+}
+
+.card-entrada-2 .author {
+  color: var(--color-7);
+  font-weight: 500;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.card-entrada-2 .capa {
+  flex: 0 0 65%;
+}
+
+@media (max-width: 960px) {
+  .card-entrada-2 .capa {
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+  }
+}
+
+.card-entrada-2.half .capa {
+  flex: 0 0 50%;
+}
+
+@media (max-width: 768px) {
+  .card-entrada-2.half .capa {
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+  }
+}
+
+.card-entrada-2.small-img .capa {
+  flex: 0 0 30%;
+}
+
+@media (max-width: 768px) {
+  .card-entrada-2.small-img .capa {
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+  }
+}

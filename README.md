@@ -6,6 +6,9 @@ Os arquivos exigidos encontram-se organizados em pastas que representam entregas
 
 > Descrição das entregas:
 
-+ Primeira entrega - front-end e modelo lógico e conceitual iniciais do projeto. O modelo conceitual do banco de dados encontra-se abaixo: 
++ Primeira entrega - front-end e modelo lógico e conceitual iniciais do projeto.
++ Segunda entrega - aplicação java spring e atualização do front-end e modelagem do projeto.
 
-![banco-conceitual-squad25](https://github.com/squad25-recodePro23/projetofinal-recodepro/assets/142354609/f39ba6bb-fd87-4e57-8eeb-3adfa4ec05fb)
+> Preview:
+
+[Imagem aqui + link da aplicação funcional, se possível]
