@@ -1,0 +1,81 @@
+package squad25.comercioFacil.controllers;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
+
+import squad25.comercioFacil.models.Enterprise;
+import squad25.comercioFacil.models.Product;
+import squad25.comercioFacil.repositoryes.EnterpriseRepository;
+import squad25.comercioFacil.repositoryes.ProductRepository;
+
+@Controller
+@RequestMapping("/product")
+public class ProductController {
+	
+	@Autowired
+	private ProductRepository productRepository;
+	
+	@Autowired
+	private EnterpriseRepository enterpriseRepository;
+	
+	
+	@GetMapping("{id}/listar")
+	public ModelAndView listar(@PathVariable("id") Long id) {
+		Enterprise enterprise = enterpriseRepository.getOne(id);
+		ModelAndView modelAndView = new ModelAndView("employer/enterprise/product/listar.html");
+		List<Product> products = productRepository.findAllByIdEnterprise(id);
+		modelAndView.addObject("products", products);
+		modelAndView.addObject("enterprise", enterprise);
+		
+		return modelAndView;
+		
+	}
+	
+	
+	
+	
+	@GetMapping("{id}/cadastrar")
+	public ModelAndView cadastrar(@PathVariable("id") Long id) {
+		Product product = new Product();
+		List<Enterprise> enterprises = enterpriseRepository.findAll();
+		ModelAndView modelAndView = new ModelAndView("employer/enterprise/product/cadastro.html");
+		modelAndView.addObject("product", product);
+		modelAndView.addObject("enterprises", enterprises);
+		return modelAndView;		
+	}
+	
+	@PostMapping("{id}/cadastrar")
+	public ModelAndView cadastrar(@PathVariable("id") Long id,
+								  @ModelAttribute Product product,
+								  @RequestParam("idEnterprise") Long idEnterprise) {
+		Enterprise enterprise = enterpriseRepository.getOne(idEnterprise);
+		product.setEnterprise(enterprise);		
+		ModelAndView modelAndView = new ModelAndView("redirect:/employer/enterprise/product/listar");
+		productRepository.save(product);
+		return modelAndView; 
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
