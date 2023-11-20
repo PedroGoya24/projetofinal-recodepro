@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+ 
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+ 
+	<title>Listagem de Lojistas</title>
+</head>
+ 
+<body>
+	<nav class="navbar navbar-light bg-light">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#">Lojas</a>
+		</div>
+	</nav>
+    
+	<main class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<h1>Listagem de suas lojas</h1>
+			</div>
+		</div>
+ 
+		<div class="row">
+			<div class="col-sm-12">
+				
+				<table class="table">
+					<thead>
+						<tr>
+							<th scope="col">#</th>
+							<th scope="col">Nome fantasia</th>
+							<th scope="col">cnpj</th>							
+							<th scope="col">Número da loja</th>
+							<th scope="col">Nome do Lojista</th>														
+						</tr>
+					</thead>
+					<tbody >
+						<tr th:each="enterprise : ${enterprises}">
+							<th scope="row" th:text="${enterprise.idEnterprise}"></th>							
+							<td>
+								
+								<a th:text="${enterprise.fantasyName}"></a>
+							</td>							
+							<td th:text="${enterprise.cnpj}"></td>
+							<td th:text="${enterprise.numStore}"></td>
+							<td th:text="${employer.userName}"></td>
+							<td>
+								
+								<a th:href="@{/product/{id}/cadastrar (id=${enterprise.idEnterprise})}" class="btn btn-warning">
+									Cadastrar Produtos
+								</a>														
+								
+								<a  th:href="@{/enterprise/{id}/excluir (id=${enterprise.idEnterprise})}" class="btn btn-danger"
+									onclick="return confirm('Tem certeza que deseja excluir a loja?');">
+									Excluir
+								</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+ 
+		
+		<div class="row mt-3">
+			<div class="col-sm-12">
+				<a th:href="@{/}" class="btn btn-primary">Voltar ao inicio</a>
+			</div>
+		</div>
+	</main>
+ 
+ 
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+		crossorigin="anonymous"></script>
+</body>
+ 
+</html>
