@@ -11,4 +11,4 @@ Os arquivos exigidos encontram-se organizados em pastas que representam entregas
 
 > Preview:
 
-[Imagem aqui + link da aplicação funcional, se possível]
+![home-comercio-facil](https://github.com/squad25-recodePro23/projetofinal-recodepro/assets/142354609/06394d88-a0cd-4563-ab65-bbfb59a5b670)
