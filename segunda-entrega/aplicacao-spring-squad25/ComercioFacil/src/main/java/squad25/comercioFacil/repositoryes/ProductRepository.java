@@ -12,6 +12,6 @@ import squad25.comercioFacil.models.Product;
 @Repository
 public interface ProductRepository extends JpaRepository<Product, Long>{
 	@Query
-	(value = "SELECT * FROM products WHERE id_enterprise= :idEnterprise", nativeQuery = true)
+	(value = "SELECT * FROM product WHERE id_enterprise= :idEnterprise", nativeQuery = true)
 	public List<Product> findAllByIdEnterprise(@Param("idEnterprise") Long enterprise);
 }

@@ -18,7 +18,6 @@ public class Enterprise {
 	private String cnpj;
 	private Long numStore;
 	
-	
 	private String description;
 	
 	@OneToMany(mappedBy = "enterprise")

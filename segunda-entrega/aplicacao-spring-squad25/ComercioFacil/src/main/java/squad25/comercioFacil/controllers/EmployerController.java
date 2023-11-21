@@ -1,9 +1,6 @@
 package squad25.comercioFacil.controllers;
 
-
-
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,11 +8,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
-
 import squad25.comercioFacil.models.Employer;
-import squad25.comercioFacil.models.Enterprise;
 import squad25.comercioFacil.repositoryes.EmployerRepository;
-import squad25.comercioFacil.repositoryes.EnterpriseRepository;
 import squad25.comercioFacil.util.AccesLevel;
 
 @Controller
@@ -25,9 +19,6 @@ public class EmployerController {
 	@Autowired
 	private EmployerRepository employerRepository;
 	private AccesLevel accesLevel;
-	@Autowired
-	private EnterpriseRepository enterpriseRepository;
-	
 	
 	@GetMapping
 	public ModelAndView listar() {
@@ -39,8 +30,6 @@ public class EmployerController {
 		
 		return modelAndView;
 	}
-	
-	
 
 	@GetMapping("/cadastrar")
 	public ModelAndView cadastrar(){
@@ -49,18 +38,18 @@ public class EmployerController {
 		
 		return modelAndView;
 	}
+	
 	@PostMapping("/cadastrar")
 	public ModelAndView cadastrar(Employer employer){
-		ModelAndView modelAndView = new ModelAndView("redirect:/");
+		ModelAndView modelAndView = new ModelAndView("redirect:/employer");
 		employerRepository.save(employer);
 		return modelAndView;	
 	}
 	
-	
 	@GetMapping("/{id}/editar")
 	public ModelAndView editar(@PathVariable Long id){
 		ModelAndView modelAndView = new ModelAndView("employer/editar");
-		modelAndView.addObject("employer", employerRepository.getOne(id));
+		modelAndView.addObject("employer", employerRepository.getReferenceById(id));
 		return modelAndView;
 	}
 	
@@ -84,7 +73,7 @@ public class EmployerController {
 	@GetMapping("/{id}/detalhes")
 	public ModelAndView detalhes(@PathVariable Long id) {
 		ModelAndView modelAndView = new ModelAndView("employer/detalhes");
-		Employer employer = employerRepository.getById(id);
+		Employer employer = employerRepository.getReferenceById(id);
 		modelAndView.addObject("employer", employer);
 	
 		return modelAndView;

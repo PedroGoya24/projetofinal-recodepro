@@ -14,7 +14,5 @@ public enum AccesLevel {
 
     public String getName() {
         return name;
-    }
-    
-    
+    }    
 }

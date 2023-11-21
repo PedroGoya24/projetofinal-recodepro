@@ -59,6 +59,7 @@
 									onclick="return confirm('Tem certeza que deseja excluir a loja?');">
 									Excluir
 								</a>
+								<a th:href="@{/product/{id}/listar (id=${enterprise.idEnterprise})}" class="btn btn-primary">Lista de produtos</a>
 							</td>
 						</tr>
 					</tbody>
@@ -69,7 +70,8 @@
 		
 		<div class="row mt-3">
 			<div class="col-sm-12">
-				<a th:href="@{/}" class="btn btn-primary">Voltar ao inicio</a>
+				<a th:href="@{/}" class="btn btn-primary">Voltar ao inicio</a>			
+				
 			</div>
 		</div>
 	</main>

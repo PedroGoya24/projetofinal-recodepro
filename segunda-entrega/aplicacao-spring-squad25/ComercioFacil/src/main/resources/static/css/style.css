@@ -1,0 +1,539 @@
+/*--------------------------------------------------
+ -- Generals --
+--------------------------------------------------*/
+
+:root {
+    --bg-01-color: white;
+    --bg-02-color: rgb(248, 249, 250);
+    --bg-03-color: rgb(234, 217, 218); 
+    --bg-04-color: rgba(213, 179, 181);
+    --bg-05-color: rgb(191, 141, 144); 
+    --bg-06-color: rgb(170, 103, 107); 
+    /* --bg-07-color: rgba(153, 94, 98); */
+    --bg-08-color: rgba(153, 93, 97);
+    --bg-09-color: rgba(85, 52, 54);
+
+    --font-01-color: white;
+    --font-02-color: rgba(123, 87, 92, 0.95);
+    --font-03-color: rgb(234, 217, 218); 
+    --font-04-color: #666666;
+    --font-05-color: #444444;
+
+    --border-01-color: white;
+    --border-02-color: rgb(170, 103, 107);
+    --border-03-color: #666666;
+    --border-04-color: rgb(85, 52, 54);
+
+    --buttons-01-bg-color: rgb(170, 103, 107);
+    --buttons-02-bg-color: rgb(191, 141, 144); 
+    --buttons-03-bg-color: rgb(85, 53, 54);
+    --buttons-04-bg-color: rgb(98, 69, 70);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-02-color);
+}
+
+a {
+    color: var(--font-01-color) !important;
+    text-decoration: none;
+}
+  
+a:hover {
+    color: var(--font-03-color) !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--font-02-color);
+}
+
+p, select option {
+    color: var(--font-05-color);
+}
+
+/*--------------------------------------------------
+ - Sections general -
+--------------------------------------------------*/
+
+section {
+    margin: 4em 0;
+}
+
+.section-title p {
+    color: var(--font-04-color);
+}
+
+/*--------------------------------------------------
+ - Forms, labels, inputs, icons and cards general -
+--------------------------------------------------*/
+
+form label {
+    color: var(--font-04-color);
+    font-size: 15px;
+}
+
+input[type="email"], input[type="text"], form textarea {
+    color: var(--font-04-color) !important;
+    font-size: 14px !important;
+    font-weight: 300 !important;
+    resize: none;
+}
+
+.icon {
+    color: var(--buttons-03-bg-color);
+    font-size: 42px;
+}
+
+.question-icon {
+    color: var(--font-04-color);
+}
+
+.card-body span {
+    font-size: 14px;
+    color: var(--font-04-color);
+}
+
+.card-body p {
+    font-size: 14px;
+}
+
+.card-body a {
+    font-size: 15px;
+}
+
+/*--------------------------------------------------
+ - Buttons general -
+--------------------------------------------------*/
+
+.btn-primary {
+    transition: all 0.3s ease-in-out;
+    color: var(--font-01-color);
+    background-color: var(--buttons-03-bg-color);
+    border: var(--border-04-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--buttons-04-bg-color);
+}
+
+.btn-outline-primary {
+    transition: all 0.4s ease-in-out;
+    border-color: var(--buttons-03-bg-color);
+    color: var(--buttons-03-bg-color);
+}
+
+.btn-outline-primary:hover {
+    border-color: var(--buttons-03-bg-color);
+    background-color: var(--buttons-03-bg-color);
+}
+
+.button-link {
+    color: var(--buttons-03-bg-color) !important;
+}
+
+/*--------------------------------------------------
+ #navbar
+--------------------------------------------------*/
+
+#navbar {
+    background-color: var(--bg-06-color);
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.navbar-brand img {
+    width: 60px;
+}
+
+.dropdown-menu li a {
+    color: var(--font-05-color) !important;
+}
+
+.utilities-item {
+    order: 4;
+}
+
+.utilities-focus {
+    background-color: var(--bg-09-color) !important;
+    padding-right: 30px;
+    margin-right: -30px;
+}
+
+.utilities-div {
+    background-color: var(--bg-08-color);
+    margin-top: -30px;
+}
+
+.utilities-div:hover {
+    margin-top: -25px;
+}
+
+.utilities-div img {
+    color: var(--bg-01-color);
+    width: 32px;
+}
+
+.utilities-div span {
+    font-size: 14px;
+}
+
+.nav-help button {
+    width: 40px;
+}
+
+@media (max-width: 991px) {
+    #navbar {
+       text-align: center;
+    }
+
+    #navbarSupportedContent {
+        background-color: var(--bg-08-color);
+        border-radius: 15px;
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+    }
+
+    /* #navbar a.active {
+        background-color: var(--bg-quaternary-color);
+        border-left: 5px solid var(--border-primary-color);
+        border-bottom: 0;
+        margin: auto;
+    } */
+    
+    .utilities-item {
+        order: 0;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .utilities-div {
+        margin: 0 !important;
+        padding: 0 15px !important;
+    }
+    
+    .nav-help {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .nav-help button {
+        display: none;
+    }
+}
+
+/*--------------------------------------------------
+ #hero-section
+--------------------------------------------------*/
+
+#hero-section {
+    background-color: var(--bg-06-color);
+    min-height: 300px;
+}
+
+.hero-title {
+    color: var(--bg-01-color);
+    font-size: 50px;
+}
+
+.hero-subtitle {
+    color: var(--bg-01-color);
+}
+
+/*--------------------------------------------------
+ #home-section
+--------------------------------------------------*/
+
+.map-container {
+    max-width: 930px;
+}
+
+#map {
+    border: 3px solid var(--font-03-color);
+    max-width: 100%;
+    max-height: 450px;
+}
+
+.filters-container {
+    max-width: 930px;
+}
+
+.filters-bg {
+    background-color: var(--bg-01-color);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+/*--------------------------------------------------
+ #about-section
+--------------------------------------------------*/
+
+/* Adicionar beneficios ao usar nosso site, no formato de lista expansível; */
+
+.sobre {
+  background-color: var(--color-9);
+}
+
+.sobre .conteudo h3 {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+  padding: 10px 20px;
+  background-color: var(--color-3);
+  color: var(--color-10);
+  border-radius: 7px;
+  display: inline-block;
+}
+
+.sobre .conteudo h2 {
+  font-weight: 700;
+}
+
+.sobre .conteudo p {
+  font-size: 20px;
+}
+
+.sobre .conteudo p:last-child {
+  margin-bottom: 0;
+}
+
+.sobre .conteudo .leia-mais {
+  background-color: var(--color-5);
+  color: var(--color-10);
+  font-family: var(--font-1);
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  padding: 12px 24px;
+  border-radius: 5px;
+  transition: 0.3s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.sobre .conteudo .leia-mais:hover {
+  background-color: var(--color-2);
+}
+
+.sobre .icon-box {
+  padding: 50px 40px;
+  box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  transition: all 0.3s ease-out 0s;
+  background-color: var(--color-8);
+}
+
+.sobre .icon-box i {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  font-size: 32px;
+  line-height: 0;
+  transition: all 0.4s ease-out 0s;
+}
+
+.sobre .icon-box h3 {
+  margin-bottom: 10px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.sobre .icon-box p {
+  margin-bottom: 0;
+}
+
+.sobre .icon-box:hover i {
+  background-color: var(--color-5);
+  color: var(--color-8);
+}
+
+.sobre .icon-boxes .col-md-6:nth-child(2) .icon-box,
+.sobre .icon-boxes .col-md-6:nth-child(4) .icon-box {
+  margin-top: -40px;
+}
+
+.card-meta {
+  font-size: 11px;
+  letter-spacing: 0.07rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: var(--font-2);
+  color: var(--color-7), 0.4;
+  margin-bottom: 10px;
+}
+
+.card-entrada-2 {
+  margin-bottom: 30px;
+}
+
+.card-entrada-2 .card-meta {
+  font-size: 11px;
+  letter-spacing: 0.07rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: var(--font-2);
+  color: var(--color-7);
+  margin-bottom: 10px;
+}
+
+.card-entrada-2 .author {
+  color: var(--color-7);
+  font-weight: 500;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.card-entrada-2 .capa {
+  flex: 0 0 65%;
+}
+
+@media (max-width: 960px) {
+  .card-entrada-2 .capa {
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+  }
+}
+
+.card-entrada-2.half .capa {
+  flex: 0 0 50%;
+}
+
+@media (max-width: 768px) {
+  .card-entrada-2.half .capa {
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+  }
+}
+
+.card-entrada-2.small-img .capa {
+  flex: 0 0 30%;
+}
+
+@media (max-width: 768px) {
+  .card-entrada-2.small-img .capa {
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+  }
+}
+
+/*--------------------------------------------------
+ #contacts-section
+--------------------------------------------------*/
+
+.contact-bg {
+    background-color: var(--bg-01-color);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.icon-star:active {
+    box-shadow: goldenrod 0px 2px 8px 0px;
+    border-radius: 100%;
+}
+
+.icon-star:hover {
+    color: goldenrod;
+}
+
+/*--------------------------------------------------
+ #subscribe-section
+--------------------------------------------------*/
+
+#subscribe-section {
+    background-color: var(--bg-03-color);
+}
+
+/*--------------------------------------------------
+ #enterprise-create-section
+--------------------------------------------------*/
+
+#enterprise-create-section form {
+    background-color: var(--bg-01-color);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.labelPhoto {
+    transition: background-color 250ms ease-in-out, box-shadow 250ms ease-in-out;
+    max-width: 200px;
+    width: 100%;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    border: 2px dashed currentcolor;
+} 
+
+#divPhoto label[for="inputFile"] {
+    cursor: pointer;
+}
+
+#divPhoto:hover > .labelPhoto {
+    background-color: rgba(218, 218, 218, 0.850);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+#imgPhoto {
+    max-width: 100%;
+    min-width: 100%;
+}
+
+/*--------------------------------------------------
+ #list-products-section
+--------------------------------------------------*/
+
+/*--------------------------------------------------
+ #restricted-section
+--------------------------------------------------*/
+
+.card-enterprise {
+    /* width: 15rem; */
+    transition: box-shadow 0.2s ease-in-out 0s;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    cursor: pointer;
+    width: 90%;
+    max-width: 400px;
+    min-height: 350px;
+}
+
+.card-enterprise:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.img-container {
+    min-height: 150px;
+    max-height: 150px;
+    overflow: hidden;
+}
+
+/*--------------------------------------------------
+ #footer
+--------------------------------------------------*/
+
+#footer {
+    background-color: var(--bg-06-color);
+    padding: 0.5em 2em;
+}
+
+#footer p {
+    color: var(--font-01-color);
+}
+
+#footer-top {
+    margin-bottom: 0.5em;
+}
+
+#social-networks i {
+    transition: all 0.3s ease-in-out;
+    color: var(--font-01-color);
+}
+
+#social-networks i:hover {
+    color: var(--font-03-color);
+}
+
+@media (max-width: 991px) {
+    #footer-bottom .autor {
+        text-align: left !important;
+    }
+}
